@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/mainScreen">
+
+    <fragment
+        android:id="@+id/mainScreen"
+        android:name="sairaa.org.task.fragments.MainScreen"
+        android:label="Home"
+        tools:layout="@layout/fragment_main_screen" >
+        <action
+            android:id="@+id/action_mainScreen_to_normalScreen"
+            app:destination="@id/normalScreen" />
+        <action
+            android:id="@+id/action_mainScreen_to_dynamicScreen"
+            app:destination="@id/dynamicScreen" />
+    </fragment>
+    <fragment
+        android:id="@+id/normalScreen"
+        android:name="sairaa.org.task.fragments.NormalScreen"
+        android:label="Screen1"
+        tools:layout="@layout/fragment_normal_screen" >
+        <action
+            android:id="@+id/action_normalScreen_to_detailsScreen"
+            app:destination="@id/detailsScreen" />
+    </fragment>
+    <fragment
+        android:id="@+id/dynamicScreen"
+        android:name="sairaa.org.task.fragments.DynamicScreen"
+        android:label="Screen2"
+        tools:layout="@layout/fragment_dynamic_screen" >
+        <action
+            android:id="@+id/action_dynamicScreen_to_detailsScreen"
+            app:destination="@id/detailsScreen" />
+    </fragment>
+    <fragment
+        android:id="@+id/successScreen"
+        android:name="sairaa.org.task.fragments.SuccessScreen"
+        android:label="Greetings"
+        tools:layout="@layout/fragment_success_screen" >
+        <action
+            android:id="@+id/action_successScreen_to_mainScreen2"
+            app:destination="@id/mainScreen"
+            app:popUpTo="@+id/mainScreen"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailsScreen"
+        android:name="sairaa.org.task.fragments.DetailsScreen"
+        android:label="Details"
+        tools:layout="@layout/fragment_details_screen" >
+        <action
+            android:id="@+id/action_detailsScreen_to_successScreen"
+            app:destination="@id/successScreen" />
+    </fragment>
+</navigation>

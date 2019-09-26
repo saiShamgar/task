@@ -1,0 +1,469 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/lite_white"
+        tools:context=".fragments.NormalScreen">
+
+
+        <TextView
+            android:id="@+id/normal_scn_sbt_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/submit"
+            android:gravity="center"
+            android:paddingTop="12dp"
+            android:paddingBottom="12dp"
+            android:background="@color/colorPrimaryDark"
+            android:textColor="@color/white"
+            android:textAllCaps="false"
+            android:fontFamily="@font/poppins_regular"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/view"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="#880e4f"
+            app:layout_constraintDimensionRatio="1:0.7"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" >
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/circleImageView"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:src="@drawable/android"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="8dp"
+                android:textColor="@color/white"
+                android:fontFamily="@font/poppins_semi_bold"
+                android:text="@string/register"
+                android:gravity="center"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/circleImageView" />
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/materialCardView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="120dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="70dp"
+            app:cardCornerRadius="8dp"
+            app:layout_constraintBottom_toBottomOf="@+id/view"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view"
+            app:layout_constraintVertical_bias="0.0">
+
+
+                <androidx.core.widget.NestedScrollView
+                    android:id="@+id/nestedScrollView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp">
+
+
+                        <TextView
+                            android:id="@+id/textView7"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginTop="8dp"
+                            android:fontFamily="@font/poppins_regular"
+                            android:paddingLeft="8dp"
+                            android:paddingTop="10dp"
+                            android:paddingRight="8dp"
+                            android:paddingBottom="10dp"
+                            android:text="@string/issue_date"
+                            android:textColor="@color/black"
+                            app:layout_constraintEnd_toStartOf="@+id/select_pp_issue_date"
+                            app:layout_constraintHorizontal_bias="0.5"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/textView13" />
+
+                        <TextView
+                            android:id="@+id/textView5"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginTop="15dp"
+                            android:layout_marginEnd="8dp"
+                            android:layout_marginRight="8dp"
+                            android:fontFamily="@font/poppins_semi_bold"
+                            android:paddingStart="8dp"
+                            android:paddingEnd="8dp"
+                            android:text="@string/passport_details"
+                            android:textColor="@color/black"
+                            android:textSize="16sp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/textInputLayout3" />
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/textInputLayout3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginEnd="8dp"
+                            android:layout_marginRight="8dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/gender_radio_group">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/address"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/poppins_light"
+                                android:hint="@string/address"
+                                android:inputType="textMultiLine"
+                                android:maxLength="30"
+                                android:textColor="@color/black"
+                                android:textSize="14sp" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <RadioGroup
+                            android:id="@+id/gender_radio_group"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginEnd="8dp"
+                            android:layout_marginRight="8dp"
+                            android:orientation="horizontal"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/textView3">
+
+                            <RadioButton
+                                android:id="@+id/radio_btn_male"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/poppins_regular"
+                                android:text="@string/male"
+                                android:textColor="@color/black" />
+
+                            <RadioButton
+                                android:id="@+id/radio_btn_female"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/poppins_regular"
+                                android:text="@string/female"
+                                android:textColor="@color/black" />
+                        </RadioGroup>
+
+                        <TextView
+                            android:id="@+id/textView3"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginEnd="8dp"
+                            android:layout_marginRight="8dp"
+                            android:fontFamily="@font/poppins_semi_bold"
+                            android:paddingLeft="8dp"
+                            android:paddingRight="8dp"
+                            android:text="@string/gender"
+                            android:textColor="@color/black"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/textView11" />
+
+                        <TextView
+                            android:id="@+id/textView2"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginTop="8dp"
+                            android:fontFamily="@font/poppins_semi_bold"
+                            android:paddingLeft="8dp"
+                            android:paddingTop="10dp"
+                            android:paddingRight="8dp"
+                            android:paddingBottom="10dp"
+                            android:text="@string/date_of_birth"
+                            android:textColor="@color/black"
+                            app:layout_constraintEnd_toStartOf="@+id/selectDate"
+                            app:layout_constraintHorizontal_bias="0.5"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/textInputLayout2" />
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/textInputLayout2"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginTop="4dp"
+                            android:layout_marginEnd="8dp"
+                            android:layout_marginRight="8dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/textInputLayout">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/fullName"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/poppins_light"
+                                android:hint="@string/full_name"
+                                android:maxLength="15"
+                                android:imeOptions="actionDone"
+                                android:inputType="text"
+                                android:textColor="@color/black"
+                                android:textSize="14sp" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/textInputLayout"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginEnd="8dp"
+                            android:layout_marginRight="8dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/surname"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/poppins_light"
+                                android:hint="@string/surname"
+                                android:maxLength="15"
+                                android:inputType="text"
+                                android:imeOptions="actionNext"
+                                android:textColor="@color/black"
+                                android:textSize="14sp" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <TextView
+                            android:id="@+id/selectDate"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:drawableRight="@drawable/ic_date_range_black_24dp"
+                            android:fontFamily="@font/poppins_light"
+                            android:gravity="center"
+                            android:paddingStart="8dp"
+                            android:paddingLeft="8dp"
+                            android:paddingTop="10dp"
+                            android:paddingRight="8dp"
+                            android:paddingBottom="10dp"
+                            android:text="@string/yyyy_dd_mm"
+                            android:textColor="@color/black"
+                            app:layout_constraintBaseline_toBaselineOf="@+id/textView2"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.5"
+                            app:layout_constraintStart_toEndOf="@+id/textView2" />
+
+                        <TextView
+                            android:id="@+id/select_pp_issue_date"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginRight="8dp"
+                            android:drawableRight="@drawable/ic_date_range_black_24dp"
+                            android:fontFamily="@font/poppins_light"
+                            android:gravity="center"
+                            android:paddingLeft="8dp"
+                            android:paddingTop="10dp"
+                            android:paddingRight="8dp"
+                            android:paddingBottom="10dp"
+                            android:text="@string/yyyy_dd_mm"
+                            android:textColor="@color/black"
+                            app:layout_constraintBaseline_toBaselineOf="@+id/textView7"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.5"
+                            app:layout_constraintStart_toEndOf="@+id/textView7" />
+
+                        <TextView
+                            android:id="@+id/textView9"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginStart="8dp"
+                            android:fontFamily="@font/poppins_regular"
+                            android:gravity="center"
+                            android:paddingLeft="8dp"
+                            android:paddingTop="10dp"
+                            android:paddingRight="8dp"
+                            android:paddingBottom="10dp"
+                            android:text="@string/expiry_date"
+                            android:textColor="@color/black"
+                            app:layout_constraintBaseline_toBaselineOf="@+id/select_pp_expiry_date"
+                            app:layout_constraintEnd_toStartOf="@+id/select_pp_expiry_date"
+                            app:layout_constraintHorizontal_bias="0.5"
+                            app:layout_constraintStart_toStartOf="parent" />
+
+                        <TextView
+                            android:id="@+id/select_pp_expiry_date"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginRight="8dp"
+                            android:drawableRight="@drawable/ic_date_range_black_24dp"
+                            android:fontFamily="@font/poppins_light"
+                            android:gravity="center"
+                            android:paddingLeft="8dp"
+                            android:paddingTop="10dp"
+                            android:paddingRight="8dp"
+                            android:paddingBottom="10dp"
+                            android:text="@string/yyyy_dd_mm"
+                            android:textColor="@color/black"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.5"
+                            app:layout_constraintStart_toEndOf="@+id/textView9"
+                            app:layout_constraintTop_toBottomOf="@+id/select_pp_issue_date" />
+
+                        <TextView
+                            android:id="@+id/textView11"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginTop="8dp"
+                            android:fontFamily="@font/poppins_semi_bold"
+                            android:paddingLeft="8dp"
+                            android:paddingTop="10dp"
+                            android:paddingRight="8dp"
+                            android:paddingBottom="10dp"
+                            android:text="@string/blood_group"
+                            android:textColor="@color/black"
+                            app:layout_constraintEnd_toStartOf="@+id/blood_group"
+                            app:layout_constraintHorizontal_bias="0.5"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+                        <EditText
+                            android:id="@+id/blood_group"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginEnd="8dp"
+                            android:imeOptions="actionDone"
+                            android:inputType="text"
+                            android:layout_marginRight="8dp"
+                            android:fontFamily="@font/poppins_light"
+                            android:gravity="center"
+                            android:hint="@string/ab"
+                            android:textSize="14sp"
+                            android:maxLength="3"
+                            android:paddingLeft="8dp"
+                            android:paddingTop="10dp"
+                            android:paddingRight="8dp"
+                            android:paddingBottom="10dp"
+                            android:textColor="@color/black"
+
+                            app:layout_constraintBaseline_toBaselineOf="@+id/textView11"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.5"
+                            app:layout_constraintStart_toEndOf="@+id/textView11" />
+
+                        <TextView
+                            android:id="@+id/textView13"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginLeft="8dp"
+                            android:fontFamily="@font/poppins_regular"
+                            android:paddingLeft="8dp"
+                            android:paddingTop="10dp"
+                            android:paddingRight="8dp"
+                            android:paddingBottom="10dp"
+                            android:text="@string/passport_id"
+                            android:textColor="@color/black"
+                            app:layout_constraintBaseline_toBaselineOf="@+id/passportId"
+                            app:layout_constraintEnd_toStartOf="@+id/passportId"
+                            app:layout_constraintHorizontal_bias="0.5"
+                            app:layout_constraintStart_toStartOf="parent" />
+
+                        <EditText
+                            android:id="@+id/passportId"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/enter"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginTop="8dp"
+                            android:fontFamily="@font/poppins_regular"
+                            android:paddingLeft="8dp"
+                            android:paddingTop="10dp"
+                            android:imeOptions="actionDone"
+                            android:inputType="text"
+                            android:ellipsize="end"
+                            android:textSize="14sp"
+                            android:singleLine="true"
+                            android:paddingRight="8dp"
+                            android:paddingBottom="10dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.5"
+                            app:layout_constraintStart_toEndOf="@+id/textView13"
+                            app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.core.widget.NestedScrollView>
+
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

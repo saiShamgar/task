@@ -1,0 +1,56 @@
+{
+  "inputFields": [
+    {
+      "fieldName": "surname",
+      "displayName": "Surname",
+      "type": "EditText",
+      "required": 1,
+      "minLength": 2,
+      "maxLength": 15,
+      "multiline": false
+    },
+    {
+      "fieldName": "givenname",
+      "displayName": "Given Name",
+      "type": "EditText",
+      "required": 0,
+      "minLength": 2,
+      "maxLength": 15,
+      "multiline": false
+    },
+    {
+      "fieldName": "gender",
+      "displayName": "Gender",
+      "type": "Spinner",
+      "required": 0,
+      "values": ["Select","Male","Female","Transgender"]
+    },
+    {
+      "fieldName": "dob",
+      "displayName": "Date Of Birth",
+      "type": "DatePicker",
+      "required": 1,
+      "minLength": 2,
+      "maxLength": 10,
+      "format": "YYYY/DD/MM"
+    },
+    {
+      "fieldName": "bloodgroup",
+      "displayName": "Blood Group",
+      "type": "Spinner",
+      "required": 1,
+      "minLength": 2,
+      "maxLength": 10,
+      "values": ["Select","A+","B+","O+","AB+","A-","B-","O-","AB-"]
+    },
+    {
+      "fieldName": "address",
+      "displayName": "Address",
+      "type": "EditText",
+      "required": 1,
+      "minLength": 2,
+      "maxLength": 30,
+      "multiline": true
+    }
+  ]
+}

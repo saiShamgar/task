@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">Task</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="confirm">Confirm</string>
+    <string name="surname">Surname :</string>
+    <string name="textview">TextView</string>
+    <string name="full_name">Full Name :</string>
+    <string name="address">Address :</string>
+    <string name="passport_id">PassPort ID :</string>
+    <string name="passport_issue_date">PassPort Issue Date :</string>
+    <string name="passport_expiry_date">PassPort Expiry Date :</string>
+    <string name="home">Home</string>
+    <string name="dynamic_screen">Dynamic Screen</string>
+    <string name="normal_screen">Normal Screen</string>
+    <string name="submit">Submit</string>
+    <string name="register">Register</string>
+    <string name="issue_date">Issue Date :</string>
+    <string name="passport_details">PassPort Details :</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="gender">Gender :</string>
+    <string name="date_of_birth">Date Of Birth :</string>
+    <string name="yyyy_dd_mm">YYYY/DD/MM</string>
+    <string name="expiry_date">Expiry Date :</string>
+    <string name="blood_group">Blood Group :</string>
+    <string name="ab"> ex :AB+</string>
+    <string name="enter">Enter</string>
+</resources>

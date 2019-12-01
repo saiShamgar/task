@@ -1,4 +1,4 @@
-package sairaa.org.task.fragments.ViewModel;
+package sairaa.org.task.fragments.viewModel;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
@@ -6,7 +6,7 @@ import androidx.lifecycle.ViewModel;
 
 import java.util.List;
 
-import sairaa.org.task.Model.ScreenFields;
+import sairaa.org.task.model.ScreenFields;
 
 public class DynamicScreenViewModel extends ViewModel {
 

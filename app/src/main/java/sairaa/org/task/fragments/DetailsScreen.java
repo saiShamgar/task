@@ -9,12 +9,11 @@ import androidx.databinding.DataBindingUtil;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.Navigation;
 
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import sairaa.org.task.Model.NormalScreenModel;
+import sairaa.org.task.model.NormalScreenModel;
 import sairaa.org.task.R;
 import sairaa.org.task.databinding.FragmentDetailsScreenBinding;
 
@@ -28,7 +27,8 @@ public class DetailsScreen extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         detailsScreenBinding= DataBindingUtil.inflate(inflater,R.layout.fragment_details_screen, container, false);
-
+        detailsScreenBinding.setLifecycleOwner(this);
+        //detailsScreenBinding.getHandlers();
         return detailsScreenBinding.getRoot();
     }
 
@@ -36,19 +36,20 @@ public class DetailsScreen extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        data= (NormalScreenModel) getArguments().getSerializable("data");
 
-        if (data!=null){
-           detailsScreenBinding.surname.setText(data.getSurName());
-           detailsScreenBinding.fullname.setText(data.getFullName());
-           detailsScreenBinding.dob.setText(data.getCreationDate());
-           detailsScreenBinding.gender.setText(data.getGender());
-           detailsScreenBinding.address.setText(data.getAddress());
-           detailsScreenBinding.passportId.setText(data.getPassPortId());
-           detailsScreenBinding.ppIssueDate.setText(data.getPpIssueDate());
-           detailsScreenBinding.ppExpiryDate.setText(data.getPpExpriyDate());
-           detailsScreenBinding.bloodGroup.setText(data.getBloodGroup());
-        }
+       // data= (NormalScreenModel) getArguments().getSerializable("data");
+
+//        if (data!=null){
+//           detailsScreenBinding.surname.setText(data.getSurName());
+//           detailsScreenBinding.fullname.setText(data.getFullName());
+//           detailsScreenBinding.dob.setText(data.getCreationDate());
+//           detailsScreenBinding.gender.setText(data.getGender());
+//           detailsScreenBinding.address.setText(data.getAddress());
+//           detailsScreenBinding.passportId.setText(data.getPassPortId());
+//           detailsScreenBinding.ppIssueDate.setText(data.getPpIssueDate());
+//           detailsScreenBinding.ppExpiryDate.setText(data.getPpExpriyDate());
+//           detailsScreenBinding.bloodGroup.setText(data.getBloodGroup());
+//        }
 
 
         detailsScreenBinding.detailsConfirmButton.setOnClickListener(new View.OnClickListener() {

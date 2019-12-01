@@ -1,4 +1,4 @@
-package sairaa.org.task.Utils;
+package sairaa.org.task.utils;
 
 public interface Constants {
 

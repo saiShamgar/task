@@ -1,18 +1,22 @@
-package sairaa.org.task.Model;
+package sairaa.org.task.model;
+
+import androidx.databinding.BaseObservable;
+import androidx.databinding.Bindable;
+import androidx.databinding.library.baseAdapters.BR;
 
 import java.io.Serializable;
 
-public class NormalScreenModel implements Serializable {
+public class NormalScreenModel extends BaseObservable implements Serializable {
 
-    private String surName;
-    private String fullName;
-    private String creationDate;
-    private String gender;
-    private String address;
-    private String ppIssueDate;
-    private String ppExpriyDate;
-    private String bloodGroup;
-    private String PassPortId;
+    public String surName;
+    public String fullName;
+    public String creationDate;
+    public String gender;
+    public String address;
+    public String ppIssueDate;
+    public String ppExpriyDate;
+    public String bloodGroup;
+    public String PassPortId;
 
     public NormalScreenModel(String surName, String fullName, String creationDate, String gender, String address, String ppIssueDate, String ppExpriyDate, String bloodGroup, String passPortId) {
         this.surName = surName;
@@ -25,6 +29,7 @@ public class NormalScreenModel implements Serializable {
         this.bloodGroup = bloodGroup;
         PassPortId = passPortId;
     }
+
 
     public String getBloodGroup() {
         return bloodGroup;
@@ -40,10 +45,12 @@ public class NormalScreenModel implements Serializable {
 
     public void setPassPortId(String passPortId) {
         PassPortId = passPortId;
+
     }
 
     public NormalScreenModel() {
     }
+
 
     public String getSurName() {
         return surName;
@@ -51,7 +58,9 @@ public class NormalScreenModel implements Serializable {
 
     public void setSurName(String surName) {
         this.surName = surName;
+
     }
+
 
     public String getFullName() {
         return fullName;
@@ -59,7 +68,9 @@ public class NormalScreenModel implements Serializable {
 
     public void setFullName(String fullName) {
         this.fullName = fullName;
+
     }
+
 
     public String getCreationDate() {
         return creationDate;
@@ -67,7 +78,9 @@ public class NormalScreenModel implements Serializable {
 
     public void setCreationDate(String creationDate) {
         this.creationDate = creationDate;
+
     }
+
 
     public String getGender() {
         return gender;
@@ -75,7 +88,9 @@ public class NormalScreenModel implements Serializable {
 
     public void setGender(String gender) {
         this.gender = gender;
+
     }
+
 
     public String getAddress() {
         return address;
@@ -83,7 +98,9 @@ public class NormalScreenModel implements Serializable {
 
     public void setAddress(String address) {
         this.address = address;
+
     }
+
 
     public String getPpIssueDate() {
         return ppIssueDate;
@@ -91,6 +108,7 @@ public class NormalScreenModel implements Serializable {
 
     public void setPpIssueDate(String ppIssueDate) {
         this.ppIssueDate = ppIssueDate;
+
     }
 
     public String getPpExpriyDate() {

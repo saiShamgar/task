@@ -3,6 +3,12 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <data>
+        <variable
+            name="handlers"
+            type="sairaa.org.task.model.DetailsViewModel" />
+    </data>
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -55,7 +61,7 @@
             android:paddingTop="6dp"
             android:paddingRight="8dp"
             android:paddingBottom="6dp"
-            android:text="TextView"
+            android:text="@={handlers.surname}"
             android:textColor="@color/black"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
@@ -92,7 +98,7 @@
             android:paddingTop="6dp"
             android:paddingRight="8dp"
             android:paddingBottom="6dp"
-            android:text="TextView"
+            android:text="@={handlers.fullName}"
             android:textColor="@color/black"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
@@ -129,7 +135,7 @@
             android:paddingTop="6dp"
             android:paddingRight="8dp"
             android:paddingBottom="6dp"
-            android:text="TextView"
+            android:text="@={handlers.creationDate}"
             android:textColor="@color/black"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
@@ -166,7 +172,7 @@
             android:paddingTop="6dp"
             android:paddingRight="8dp"
             android:paddingBottom="6dp"
-            android:text="TextView"
+            android:text="@={handlers.bloodGroup}"
             android:textColor="@color/black"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
@@ -203,7 +209,7 @@
             android:paddingTop="6dp"
             android:paddingRight="8dp"
             android:paddingBottom="6dp"
-            android:text="TextView"
+            android:text="@={handlers.gender}"
             android:textColor="@color/black"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
@@ -240,7 +246,7 @@
             android:paddingTop="6dp"
             android:paddingRight="8dp"
             android:paddingBottom="6dp"
-            android:text="TextView"
+            android:text="@={handlers.address}"
             android:textColor="@color/black"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
@@ -277,7 +283,7 @@
             android:paddingTop="6dp"
             android:paddingRight="8dp"
             android:paddingBottom="6dp"
-            android:text="TextView"
+            android:text="@={handlers.passPortId}"
             android:textColor="@color/black"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
@@ -314,7 +320,7 @@
             android:paddingTop="6dp"
             android:paddingRight="8dp"
             android:paddingBottom="6dp"
-            android:text="TextView"
+            android:text="@={handlers.ppIssueDate}"
             android:textColor="@color/black"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
@@ -351,7 +357,7 @@
             android:paddingTop="6dp"
             android:paddingRight="8dp"
             android:paddingBottom="6dp"
-            android:text="TextView"
+            android:text="@={handlers.ppExpriyDate}"
             android:textColor="@color/black"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"

@@ -1,4 +1,4 @@
-package sairaa.org.task.Model;
+package sairaa.org.task.model;
 
 import java.util.List;
 

@@ -1,20 +1,16 @@
 package sairaa.org.task.fragments;
 
 import android.app.DatePickerDialog;
-import android.os.Build;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.annotation.RequiresApi;
-import androidx.databinding.DataBindingUtil;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 import androidx.navigation.Navigation;
 
 import android.text.InputFilter;
-import android.text.InputType;
 import android.text.Spanned;
 import android.text.TextUtils;
 import android.util.Log;
@@ -37,24 +33,23 @@ import com.google.gson.Gson;
 
 import org.json.JSONException;
 import org.json.JSONObject;
-import org.w3c.dom.Text;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
-import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
 import java.util.regex.Pattern;
 
-import sairaa.org.task.Model.NormalScreenModel;
-import sairaa.org.task.Model.ScreeResponse;
-import sairaa.org.task.Model.ScreenFields;
+import sairaa.org.task.model.DetailsViewModel;
+import sairaa.org.task.model.NormalScreenModel;
+import sairaa.org.task.model.ScreeResponse;
+import sairaa.org.task.model.ScreenFields;
 import sairaa.org.task.R;
-import sairaa.org.task.Utils.AppUtils;
+import sairaa.org.task.utils.AppUtils;
 import sairaa.org.task.databinding.FragmentDynamicScreenBinding;
-import sairaa.org.task.fragments.ViewModel.DynamicScreenViewModel;
+import sairaa.org.task.fragments.viewModel.DynamicScreenViewModel;
 
 public class DynamicScreen extends Fragment {
 
@@ -260,8 +255,8 @@ public class DynamicScreen extends Fragment {
 
                }
 
-               NormalScreenModel data=new NormalScreenModel();
-               data.setSurName(surname.getText().toString());
+               DetailsViewModel data=new DetailsViewModel();
+               data.setSurname(surname.getText().toString());
                data.setFullName(givnName.getText().toString());
                data.setCreationDate(dob.getText().toString());
                data.setBloodGroup(bloodGroup);
@@ -271,9 +266,9 @@ public class DynamicScreen extends Fragment {
                data.setPpIssueDate("--");
                data.setPpExpriyDate("--");
 
-               Bundle bundle=new Bundle();
-               bundle.putSerializable("data",data);
-               Navigation.findNavController(view).navigate(R.id.action_dynamicScreen_to_detailsScreen,bundle);
+//               Bundle bundle=new Bundle();
+//               bundle.putSerializable("data",data);
+               Navigation.findNavController(view).navigate(R.id.action_dynamicScreen_to_detailsScreen);
            }
        });
 

@@ -1,15 +1,13 @@
 package sairaa.org.task.fragments;
 
 import android.app.DatePickerDialog;
-import android.content.Context;
-import android.os.Build;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.annotation.RequiresApi;
 import androidx.databinding.DataBindingUtil;
 import androidx.fragment.app.Fragment;
+import androidx.lifecycle.ViewModelProviders;
 import androidx.navigation.Navigation;
 
 import android.util.Log;
@@ -22,18 +20,20 @@ import android.widget.RadioGroup;
 import android.widget.Toast;
 
 import java.util.Calendar;
-import java.util.Objects;
 
-import sairaa.org.task.Model.NormalScreenModel;
+import sairaa.org.task.model.DetailsViewModel;
+import sairaa.org.task.model.NormalScreenModel;
 import sairaa.org.task.R;
-import sairaa.org.task.Utils.AppUtils;
-import sairaa.org.task.Utils.Constants;
+import sairaa.org.task.utils.AppUtils;
+import sairaa.org.task.utils.Constants;
+import sairaa.org.task.databinding.FragmentDetailsScreenBinding;
 import sairaa.org.task.databinding.FragmentNormalScreenBinding;
 
 
 public class NormalScreen extends Fragment implements Constants {
 
     private FragmentNormalScreenBinding normalScreenBinding;
+    private FragmentDetailsScreenBinding detailsScreenBinding;
     private String stringDate;
     private boolean validate ;
 
@@ -42,7 +42,8 @@ public class NormalScreen extends Fragment implements Constants {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         normalScreenBinding= DataBindingUtil.inflate(inflater,R.layout.fragment_normal_screen, container, false);
-
+       // detailsScreenBinding= DataBindingUtil.inflate(inflater,R.layout.fragment_details_screen, container, false);
+        normalScreenBinding.setLifecycleOwner(this);
         return normalScreenBinding.getRoot();
     }
 
@@ -53,23 +54,29 @@ public class NormalScreen extends Fragment implements Constants {
         normalScreenBinding.normalScnSbtButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (doValidation()){
-                    NormalScreenModel data=new NormalScreenModel();
-                    data.setSurName(normalScreenBinding.surname.getText().toString().trim());
-                    data.setFullName(normalScreenBinding.fullName.getText().toString().trim());
-                    data.setCreationDate(normalScreenBinding.selectDate.getText().toString().trim());
-                    data.setBloodGroup(normalScreenBinding.bloodGroup.getText().toString().trim());
-                    data.setGender(radioGroupSelectedText(normalScreenBinding.genderRadioGroup));
-                    data.setAddress(normalScreenBinding.address.getText().toString().trim());
-                    data.setPassPortId(normalScreenBinding.passportId.getText().toString().trim());
-                    data.setPpIssueDate(normalScreenBinding.selectPpIssueDate.getText().toString());
-                    data.setPpExpriyDate(normalScreenBinding.selectPpExpiryDate.getText().toString().trim());
+//                if (doValidation()){
 
-                    Bundle bundle=new Bundle();
-                    bundle.putSerializable("data",data);
+                    DetailsViewModel data=new DetailsViewModel();
+                    data.setSurname("Gandiboyina");
+                    data.setFullName("Sai Nookaraju");
+                    data.setCreationDate("FEB 9 1997");
+                    data.setBloodGroup("B+");
+                    data.setGender("Male");
+                    data.setAddress("Vizag");
+                    data.setPassPortId("1234");
+                    data.setPpIssueDate("NOV 19 2019");
+                    data.setPpExpriyDate("NOV 19 2022");
 
-                    Navigation.findNavController(view).navigate(R.id.action_normalScreen_to_detailsScreen,bundle);
-                }
+                normalScreenBinding.setHandlers(data);
+                    //detailsScreenBinding.invalidateAll();
+//                    Bundle bundle=new Bundle();
+//                    bundle.putSerializable("data",data);
+                    //detailsScreenBinding.setHandlers(data);
+
+                   // Navigation.findNavController(view).navigate(R.id.action_normalScreen_to_detailsScreen);
+
+
+//                }
               //
             }
         });

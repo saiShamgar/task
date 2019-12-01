@@ -1,13 +1,9 @@
-package sairaa.org.task.Utils;
+package sairaa.org.task.utils;
 
-import android.app.DatePickerDialog;
-import android.content.Context;
 import android.util.Log;
-import android.widget.DatePicker;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.Calendar;
 import java.util.Date;
 
 public class AppUtils {

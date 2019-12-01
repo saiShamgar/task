@@ -2,6 +2,12 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="handlers"
+            type="sairaa.org.task.model.DetailsViewModel" />
+
+    </data>
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -45,7 +51,7 @@
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="8dp"
                 android:layout_marginRight="8dp"
-                android:src="@drawable/android"
+                android:src="@drawable/ic_android"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.498"
                 app:layout_constraintStart_toStartOf="parent"
@@ -160,6 +166,7 @@
                                 android:hint="@string/address"
                                 android:inputType="textMultiLine"
                                 android:maxLength="30"
+                                android:text="@={handlers.address}"
                                 android:textColor="@color/black"
                                 android:textSize="14sp" />
                         </com.google.android.material.textfield.TextInputLayout>
@@ -254,9 +261,10 @@
                                 android:layout_height="wrap_content"
                                 android:fontFamily="@font/poppins_light"
                                 android:hint="@string/full_name"
-                                android:maxLength="15"
                                 android:imeOptions="actionDone"
                                 android:inputType="text"
+                                android:maxLength="15"
+                                android:text="@={handlers.fullName}"
                                 android:textColor="@color/black"
                                 android:textSize="14sp" />
                         </com.google.android.material.textfield.TextInputLayout>
@@ -283,6 +291,7 @@
                                 android:maxLength="15"
                                 android:inputType="text"
                                 android:imeOptions="actionNext"
+                                android:text="@={handlers.surname}"
                                 android:textColor="@color/black"
                                 android:textSize="14sp" />
                         </com.google.android.material.textfield.TextInputLayout>
@@ -292,6 +301,7 @@
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="10dp"
+                            android:layout_marginTop="7dp"
                             android:layout_marginRight="10dp"
                             android:drawableRight="@drawable/ic_date_range_black_24dp"
                             android:fontFamily="@font/poppins_light"
@@ -301,12 +311,12 @@
                             android:paddingTop="10dp"
                             android:paddingRight="8dp"
                             android:paddingBottom="10dp"
-                            android:text="@string/yyyy_dd_mm"
+                            android:text="@={handlers.creationDate}"
                             android:textColor="@color/black"
-                            app:layout_constraintBaseline_toBaselineOf="@+id/textView2"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintHorizontal_bias="0.5"
-                            app:layout_constraintStart_toEndOf="@+id/textView2" />
+                            app:layout_constraintStart_toEndOf="@+id/textView2"
+                            app:layout_constraintTop_toBottomOf="@+id/textInputLayout2" />
 
                         <TextView
                             android:id="@+id/select_pp_issue_date"
@@ -321,8 +331,7 @@
                             android:paddingTop="10dp"
                             android:paddingRight="8dp"
                             android:paddingBottom="10dp"
-                            android:text="@string/yyyy_dd_mm"
-                            android:textColor="@color/black"
+                            android:text="@={handlers.ppIssueDate}"                            android:textColor="@color/black"
                             app:layout_constraintBaseline_toBaselineOf="@+id/textView7"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintHorizontal_bias="0.5"
@@ -361,8 +370,7 @@
                             android:paddingTop="10dp"
                             android:paddingRight="8dp"
                             android:paddingBottom="10dp"
-                            android:text="@string/yyyy_dd_mm"
-                            android:textColor="@color/black"
+                            android:text="@={handlers.ppExpriyDate}"                            android:textColor="@color/black"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintHorizontal_bias="0.5"
                             app:layout_constraintStart_toEndOf="@+id/textView9"
@@ -402,6 +410,7 @@
                             android:hint="@string/ab"
                             android:textSize="14sp"
                             android:maxLength="3"
+                            android:text="@={handlers.bloodGroup}"
                             android:paddingLeft="8dp"
                             android:paddingTop="10dp"
                             android:paddingRight="8dp"
@@ -442,6 +451,7 @@
                             android:fontFamily="@font/poppins_regular"
                             android:paddingLeft="8dp"
                             android:paddingTop="10dp"
+                            android:text="@={handlers.passPortId}"
                             android:imeOptions="actionDone"
                             android:inputType="text"
                             android:ellipsize="end"
